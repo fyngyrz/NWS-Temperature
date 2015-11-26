@@ -8,6 +8,7 @@ import os,sys
 fn = 'nwsdata.txt'
 stationid = "xxxMTRggw"
 logging = True
+mode = 1 # set to 0 for celsius, 1 for fahreheit
 
 #     Project: tmp.py
 #      Author: fyngyrz  (Ben)
@@ -114,9 +115,12 @@ else:
 
 # And you know, celsius just isn't for people. Farenheit is better. So:
 # ---------------------------------------------------------------------
-farenheit = celsius * (9.0/5.0) + 32.0
-o = "%.1f" % (farenheit)
+if mode == 1:
+	farenheit = celsius * (9.0/5.0) + 32.0
+	o = "%.1fºF" % (farenheit)
+else:
+	o = "%.1fºC" % (celsius)
 
 # And at last, we have the temperature:
-print '%sºF' % o
+print o
 
