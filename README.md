@@ -3,7 +3,8 @@
 ## What it Does
 
 Fetches the temperature (in Cº) from the NWS aviation ground conditions
-forecast. Then it converts that value to Fahrenheit \(See Below\) and prints it out.
+forecast. Then it converts that value to Fahrenheit \(See Below\) or another
+scale according to its `mode` setting, and prints the result out.
 
 ## Limits
 
