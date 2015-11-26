@@ -1,5 +1,10 @@
 # tmp.py - NWS Temperature Data Fetch
 
+## What it Does
+
+Fetches the temperature (in Cº) from the NWS aviation ground conditions
+forecast. The it converts it to Fahrenheit \(See Below\) and prints it out.
+
 ## Limits
 
 The NWS identifies the software that I'm getting the temperature from
