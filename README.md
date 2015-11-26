@@ -31,3 +31,5 @@ Scale | 0 | 100
 Celsius | Meh | Dead
 Farenheit | Cold | Hot
 Kelvin | Dead | Dead
+
+So there.
