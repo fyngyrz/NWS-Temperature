@@ -7,8 +7,15 @@ import os,sys
 
 fn = 'nwsdata.txt'
 stationid = "xxxMTRggw"
-logging = True
-mode = 1 # set to 0 for celsius, 1 for fahreheit
+
+# Mode:
+#       0 Celsius
+#       1 Fahrenheit
+#       2 Kelvin
+#       3 Rankine
+#       4 Réaumur
+# ------------------
+mode = 1
 
 #     Project: tmp.py
 #      Author: fyngyrz  (Ben)
@@ -115,11 +122,22 @@ else:
 
 # And you know, celsius just isn't for people. Farenheit is better. So:
 # ---------------------------------------------------------------------
-if mode == 1:
+if mode == 0: # C
+	o = "%.1fºC" % (celsius)
+elif mode == 1: # F 
 	farenheit = celsius * (9.0/5.0) + 32.0
 	o = "%.1fºF" % (farenheit)
+elif mode == 2: # K
+	kelvin = celsius + 273.15
+	o = "%.1fºK" % (kelvin)
+elif mode == 3: # Rankine 
+	rankine = celsius * 1.8 + 32 + 459.67
+	o = "%.1fºRa" % (rankine)
+elif mode == 4: # Reamur
+	reamur = celsius * 0.08
+	o = "%.1fºRe" % (reamur)
 else:
-	o = "%.1fºC" % (celsius)
+	o = 'Unknown mode: "%d"' % (mode)
 
 # And at last, we have the temperature:
 print o
