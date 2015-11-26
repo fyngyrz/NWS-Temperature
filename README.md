@@ -36,8 +36,8 @@ sure to read the following:
 
 ## Why Fahrenheit is For People
 
-Scale | 0º | Twenty Five | Fifty | Seventy Five | 100º  
------ | -- | ----------- | ----- | ------------ | ---  
+Scale | Zero | Twenty Five | Fifty | Seventy Five | 100º  
+----- | ---- | ----------- | ----- | ------------ | ---  
  *Celsius* | Cold | Warm | Dead | Dead | Dead  
  *Fahrenheit* | Really Cold | Cold | Meh | Warm | Really Hot  
  *Kelvin* | Dead | Dead | Dead | Dead | Dead  
