@@ -35,7 +35,7 @@ obvious, like, "enter your zip code here." :\)
 Scale | Zero | Twenty Five | Fifty | Seventy Five | 100º  
 ----- | ---- | ----------- | ----- | ------------ | ---  
  *Celsius* | Cold | Warm | Dead | Dead | Dead  
- *Farenheit* | Really Cold | Cold | Meh | Warm | Really Hot  
+ *Fahrenheit* | Really Cold | Cold | Meh | Warm | Really Hot  
  *Kelvin* | Dead | Dead | Dead | Dead | Dead  
 
 Also, look. At -40ºc, it's actually -40ºF.
