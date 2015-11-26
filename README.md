@@ -9,14 +9,13 @@ scale according to its `mode` setting, and prints the result out.
 ## Limits
 
 The NWS identifies the software that I'm getting the temperature from
-as "for the whole western region", from which I take it that it is not
+as "for the whole western region", which I would read as "is not
 for areas _not_ in the "western region." Well hey, why be consistent?
 It only scares the cats.
 
-So for the moment, be aware of that. I'll try and figure out if the...
-eastern\(?\) region\(s\) use\(s\) the same software at a different URL, and if
-I find that to be the case, I'll update the project to deal with it
-somehow.
+However, I tried New York City (xxxMTRjfk) and Miami Florida, and it worked fine.
+So I don't quite know what to make of their pronoucement. Obsolete information?
+Who knows, it's the government. ¯\_(ツ)_/�
 
 ## Configuration
 

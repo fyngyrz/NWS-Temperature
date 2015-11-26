@@ -7,6 +7,8 @@ import os,sys
 
 fn = 'nwsdata.txt'
 stationid = "xxxMTRggw"
+#stationid = "xxxMTRjfk"
+#stationid = "xxxMTRmia"
 
 # Mode:
 #       0 Celsius
