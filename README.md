@@ -13,9 +13,11 @@ as "for the whole western region", which I would read as "is not
 for areas _not_ in the "western region." Well hey, why be consistent?
 It only scares the cats.
 
-However, I tried New York City (xxxMTRjfk) and Miami Florida, and it worked fine.
-So I don't quite know what to make of their pronoucement. Obsolete information?
-Who knows, it's the government. ¯\_(ツ)_/�
+However, I tried New York City \(xxxMTRjfk\) and Miami Florida
+\(xxxMTRmia\), and it worked fine. So I don't quite know what to make of
+their pronoucement. Obsolete information? Who knows, it's the USG.
+"Western region" could mean everything west of Moscow for all I know.
+Anyway...
 
 ## Configuration
 
