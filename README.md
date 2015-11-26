@@ -13,7 +13,7 @@ for areas _not_ in the "western region." Well hey, why be consistent?
 It only scares the cats.
 
 So for the moment, be aware of that. I'll try and figure out if the...
-eastern\(?\) regions uses the same software at a different URL, and if
+eastern\(?\) region\(s\) use\(s\) the same software at a different URL, and if
 I find that to be the case, I'll update the project to deal with it
 somehow.
 
