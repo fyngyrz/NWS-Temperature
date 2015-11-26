@@ -27,9 +27,14 @@ Mine is "xxxMTRggw", yours will be similar. Thats xxx, followed by MTR
 for the METAR product, and then "ggw" for my NWS weather station ID,
 which is actually "kggw", but I guess the "k" doesn't count.
 
-I'm also working on trying to come up with an easy process to let you
-dig up what your local code will be. The NWS doesn't make finding it out
-obvious, like, "enter your zip code here." :\)
+There is a list of station codes [on this page](http://www.datasink.com/cgi-bin/stationCodes.cgi)
+
+So for instance, I find my station by searching the page
+for "Glasgow", and there it is, "kggw"
+
+I remove the k, and construct xxx + MTR + ggw = xxxMTRggw
+
+That's the process, but again, this may only work in the "western region."
 
 The default is to output in degrees Fahrenheit. If you want degrees
 Celsius, Kelvin, Rankine or Réaumur, set `mode` at the top of the python source code.
