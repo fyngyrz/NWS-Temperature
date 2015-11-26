@@ -27,8 +27,8 @@ obvious, like, "enter your zip code here." :\)
 
 ## Why Farenheit is For People
 
-Scale | Zero | 50 | 100  
------ | ---- | ---  
+Scale | Zero | Fifty | 100  
+----- | ---- | ----- | ---  
  *Celsius* | Cold | Dead | Dead  
  *Farenheit* | Really Cold | Meh | Really Hot  
  *Kelvin* | Dead | Dead | Dead    
