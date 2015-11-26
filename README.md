@@ -35,5 +35,6 @@ Scale | Zero | Twenty Five | Fifty | Seventy Five | 100º
 
 Also, look. At -40ºc, it's actually -40ºF.
 Isn't that cute? Celsius trying to be reasonable, and all.
+Sorry Celsius. Too low, too late. Back across the pond with you.
 
 So there.
