@@ -37,6 +37,7 @@ Scale | Zero | Twenty Five | Fifty | Seventy Five | 100º
  *Celsius* | Cold | Warm | Dead | Dead | Dead  
  *Fahrenheit* | Really Cold | Cold | Meh | Warm | Really Hot  
  *Kelvin* | Dead | Dead | Dead | Dead | Dead  
+ *Rankine* | Dead | Dead | Dead | Dead | Dead  
 
 Also, look. At -40ºc, it's actually -40ºF.
 Isn't that cute? Celsius trying to be reasonable, and all.
