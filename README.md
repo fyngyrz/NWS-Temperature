@@ -29,8 +29,8 @@ obvious, like, "enter your zip code here." :\)
 
 Scale | Zero | 100  
 ----- | ---- | ---  
-Celsius | Meh | Dead  
-Farenheit | Cold | Hot  
-Kelvin | Dead | Dead  
+ *Celsius* | Meh | Dead  
+ *Farenheit* | Cold | Hot  
+ *Kelvin* | Dead | Dead  
 
 So there.
