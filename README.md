@@ -1,5 +1,17 @@
 # tmp.py - NWS Temperature Data Fetch
 
+## Limits
+
+The NWS identifies the software that I'm getting the temperature from
+as "for the whole western region", from which I take it that it is not
+for areas _not_ in the "western region." Well hey, why be consistent?
+It only scares the cats.
+
+So for the moment, be aware of that. I'll try and figure out if the...
+eastern\(?\) regions uses the same software at a different URL, and if
+I find that to be the case, I'll update the project to deal with it
+somehow.
+
 ## Configuration
 
 Change the **stationid** variable at the top of the file to the
@@ -8,6 +20,6 @@ will be similar. Thats xxx, followed by MTR for the METAR product,
 and then "ggw" for my NWS weather station ID, which is actually
 "kggw", but I guess the "k" doesn't count.
 
-I'm working on trying to come up with an easy process to let
-you dig up what your local code will be. The NWS doesn't make
-finding it out obvious, li,e "enter your zip code here." :)
+I'm also working on trying to come up with an easy process to let you
+dig up what your local code will be. The NWS doesn't make finding it out
+obvious, like, "enter your zip code here." :)
