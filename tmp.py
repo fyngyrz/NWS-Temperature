@@ -12,8 +12,8 @@ logging = True
 #     Project: tmp.py
 #      Author: fyngyrz  (Ben)
 #     Contact: fyngyrz@gmail.com (bugs, feature requests, kudos, bitter rejections)
-#     Project: slacker.py
-#    Homepage: https://github.com/fyngyrz/slacker
+#     Project: tmp.py
+#    Homepage: https://github.com/fyngyrz/NWS-Temperature
 #  Depends on: NWS web services
 #     License: None. It's free. *Really* free. Defy invalid social and legal norms.
 # Disclaimers: 1) Probably completely broken. Do Not Use. You were explicitly warned. Phbbbbt.
@@ -50,8 +50,8 @@ logging = True
 #               I mention you should read the disclaimers? Because you know,
 #               you really should. Several times. Read the disclaimers, that is.
 
-# Here's what is in the typical NWS data chunk we're fetching:
-# ============================================================
+# Here's what is in the typical NWS METAR data chunk we're fetching:
+# ==================================================================
 #       +- Day of month
 #       | +- 2-digit Hour
 #       | | +- 2-digit minute
