@@ -23,3 +23,12 @@ and then "ggw" for my NWS weather station ID, which is actually
 I'm also working on trying to come up with an easy process to let you
 dig up what your local code will be. The NWS doesn't make finding it out
 obvious, like, "enter your zip code here." :)
+
+## Why Farenheit is For People
+
+Scale | 0 | 100
+----- | _ | ---
+ *Celsius* | Meh | Dead
+ *Farenheit* | Cold | Hot 
+ *Kelvin* | Dead | Dead
+
