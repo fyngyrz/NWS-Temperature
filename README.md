@@ -31,7 +31,7 @@ dig up what your local code will be. The NWS doesn't make finding it out
 obvious, like, "enter your zip code here." :\)
 
 The default is to output in degrees Fahrenheit. If you want degrees
-Celsius set `mode = 1` at the top of the python source code. But be
+Celsius set `mode = 0` at the top of the python source code. But be
 sure to read the following:
 
 ## Why Fahrenheit is For People
