@@ -38,7 +38,7 @@ I remove the k, and construct xxx + MTR + ggw = xxxMTRggw
 That's the process, but again, this may only work in the "western region."
 Which is apparently anything west of Bermuda. :)
 
-![West of Bermuda...](http://fyngyrz.com/images/bermuda.png)  
+![West of Bermuda...](http://fyngyrz.com/images/bermuda2.png)  
 
 The default is to output in degrees Fahrenheit. If you want degrees
 Celsius, Kelvin, Rankine or Réaumur, set `mode` at the top of the python source code.
