@@ -27,7 +27,7 @@ Mine is "xxxMTRggw", yours will be similar. Thats xxx, followed by MTR
 for the METAR product, and then "ggw" for my NWS weather station ID,
 which is actually "kggw", but I guess the "k" doesn't count.
 
-There is a list of station codes [on this page](http://www.datasink.com/cgi-bin/stationCodes.cgi)
+There is a list of station codes **[on this page](http://www.datasink.com/cgi-bin/stationCodes.cgi)**.
 
 So for instance, I find my station by searching the page
 for "Glasgow", and there it is, "kggw"
