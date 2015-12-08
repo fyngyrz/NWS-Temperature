@@ -20,15 +20,16 @@ Arizona, which I am reasonably sure is somewhere out west, perhaps near
 Hawaii or Guam.
 
 Well hey, why should they be consistent? It only scares the cats.
-However, as cats have been known on occasion to be scared of nothing, I
-tried New York City \(xxxMTRjfk\) and Miami Florida \(xxxMTRmia\), and
-both of those worked fine. As does Los Angeles \(xxxMTRlax\) So I don't
-quite know what to make of their pronouncement. Obsolete information?
-Who knows, it's the USG. "Western region" could mean everything west of
-Moscow for all I know. My cats concur, and additionally note that mice
-exist in all these regions, so the weather everywhere needs to be known
-in order that one doesn't go outside to catch mice and find one's ears
-and tail exposed to unacceptably low temperatures.
+However, as cats have been known on occasion to be scared of nothing,
+and I have some serious trust issues, I tried New York City
+\(xxxMTRjfk\) and Miami Florida \(xxxMTRmia\), and... both of those worked
+fine. As does Los Angeles \(xxxMTRlax\) So I don't quite know what to
+make of their pronouncement. Obsolete information? Who knows, it's the
+USG. "Western region" could mean everything west of Moscow for all I
+know. My cats concur, and additionally note that mice exist in all these
+regions, so the weather everywhere needs to be known in order that one
+doesn't go outside to catch mice and find one's ears and tail exposed to
+unacceptably low temperatures.
 
 I find the whole thing inconsistantly consistent, which is consistent
 with my general impression of pretty much everything the USG is involved
