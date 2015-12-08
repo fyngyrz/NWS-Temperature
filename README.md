@@ -17,7 +17,7 @@ _not_ in the "western region." Which in turn you might be inclined to
 view as disappointing if, for instance, you live on the east coast and
 really don't care what the weather is in, oh, I don't know, Tempe
 Arizona, which I am reasonably sure is somewhere out west, perhaps near
-Japan.
+Hawaii or Guam.
 
 Well hey, why should they be consistent? It only scares the cats.
 However, as cats have been known on occasion to be scared of nothing, I
