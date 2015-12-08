@@ -46,12 +46,13 @@ government, k?
 There is a list of station codes **[on this page](http://www.datasink.com/cgi-bin/stationCodes.cgi)**.
 
 So for instance, I find my station by searching that page for "Glasgow",
-and there it is, Glasgow MT, "kggw":
+and there it is, Glasgow MT, "KGGW":
 
 ![Station Code Search](http://fyngyrz.com/images/kggw.png)  
 
-I remove the k, and construct xxx + MTR + ggw = xxxMTRggw. It looks like
-this  on my system:
+I remove the k, and construct xxx + MTR + ggw = xxxMTRggw  \(Notice
+the use of lower case instead of upper case, following the example
+the NWS provides for doing this.\) It looks like this  on my system:
 
 ```python
 stationid = "xxxMTRggw"
