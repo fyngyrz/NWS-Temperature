@@ -10,10 +10,11 @@ wgetloc = '/usr/local/bin/'
 
 # (2) Construct stationid (see "Configuration" in README.md)
 # --------------=========-----------------------------------
-stationid = "xxxMTRggw"		# Glasgow, MT - this works
-#stationid = "xxxMTRlax"	# Los Angeles, CA - this works
-#stationid = "xxxMTRjfk"	# JFK airport, NYC, NY - this works
-#stationid = "xxxMTRmia"	# Miami, FL - this works
+stationid	= "xxxMTRggw"	# Glasgow, MT - this works
+#stationid	= "xxxMTRanc"	# Anchorage, AK - this does NOT work
+#stationid	= "xxxMTRlax"	# Los Angeles, CA - this works
+#stationid	= "xxxMTRjfk"	# JFK airport, NYC, NY - this works
+#stationid	= "xxxMTRmia"	# Miami, FL - this works
 
 # (3) Set mode for the temperature scale you prefer:
 # --------====--------------------------------------
@@ -150,8 +151,9 @@ da = da.strip()
 ray = da.split(' ')
 o = None
 for el in ray:
-	if el[0] == 'T':
-		o = el[1:5] # I only want the temperature
+	if len(el) > 0:
+		if el[0] == 'T':
+			o = el[1:5] # I only want the temperature
 if o == None:
 	print 'unavailable'
 	raise  SystemExit

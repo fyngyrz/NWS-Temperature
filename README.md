@@ -29,6 +29,9 @@ I find the whole thing inconsistantly consistent, which is consistent
 with my general impression of pretty much everything the USG is involved
 in.
 
+I should note that Anchorage, AK, \(xxxMTRanc\) did *not* work. Despite
+being well west of where I am. So there's that, too.
+
 ## Configuration
 
 First, change `wgetloc` to the path to the `wget` command, including a
