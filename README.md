@@ -65,7 +65,8 @@ Which is apparently anything west of Bermuda. :)
 
 The default is to output in degrees Fahrenheit. If you want degrees
 Celsius, Kelvin, Rankine or Réaumur, set `mode` at the top of the python source code.
-The modes are described in the source code. But be sure to read the following:
+The modes are described in the source code. But be sure to consider the
+following:
 
 ## Why Fahrenheit is For People. And cats.
 
