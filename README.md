@@ -17,13 +17,13 @@ It only scares the cats.
 
 However, as cats have been known on occasion to be scared of nothing, I
 tried New York City \(xxxMTRjfk\) and Miami Florida \(xxxMTRmia\), and
-both of those worked fine. So I don't quite know what to make of their
-pronouncement. Obsolete information? Who knows, it's the USG. "Western
-region" could mean everything west of Moscow for all I know. My cats
-concur, and additionally note that mice exist in all these regions, so
-the weather everywhere needs to be known in order that one doesn't go
-outside to catch mice and find one's ears and tail exposed to unacceptably
-low temperatures.
+both of those worked fine. As does Los Angeles \(xxxMTRlax\) So I don't
+quite know what to make of their pronouncement. Obsolete information?
+Who knows, it's the USG. "Western region" could mean everything west of
+Moscow for all I know. My cats concur, and additionally note that mice
+exist in all these regions, so the weather everywhere needs to be known
+in order that one doesn't go outside to catch mice and find one's ears
+and tail exposed to unacceptably low temperatures.
 
 ## Configuration
 

@@ -1,13 +1,30 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# NOTE: requires wget command. Put location of command here, include trailing /:
+# Three items to set up:
+# ----------------------
 
+# (1) Put location of wget command here, include trailing /:
+# --------========------------------------------------------
 wgetloc = '/usr/local/bin/'
 
+# (2) Construct stationid (see "Configuration" in README.md)
+# --------------=========-----------------------------------
 stationid = "xxxMTRggw"		# Glasgow, MT - this works
+#stationid = "xxxMTRlax"	# Los Angeles, CA - this works
 #stationid = "xxxMTRjfk"	# JFK airport, NYC, NY - this works
 #stationid = "xxxMTRmia"	# Miami, FL - this works
+
+# (3) Set mode for the temperature scale you prefer:
+# --------====--------------------------------------
+# Mode:
+#       0 Celsius
+#       1 Fahrenheit
+#       2 Kelvin
+#       3 Rankine
+#       4 Réaumur
+# ------------------
+mode = 1
 
 import os,sys
 import subprocess
@@ -19,15 +36,6 @@ if version[0] != 2:
 if version[1] < 4:
 	print 'Requires higher than Python 2.3'
 	exit()
-
-# Mode:
-#       0 Celsius
-#       1 Fahrenheit
-#       2 Kelvin
-#       3 Rankine
-#       4 Réaumur
-# ------------------
-mode = 1
 
 #     Project: tmp.py
 #      Author: fyngyrz  (Ben)
