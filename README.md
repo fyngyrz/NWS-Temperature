@@ -11,9 +11,9 @@ to its `mode` setting, and prints the result out.
 ## Limits
 
 The NWS identifies the software that I'm getting the temperature from
-as "for the whole western region", which I would read as "is not
-for areas _not_ in the "western region." Well hey, why be consistent?
-It only scares the cats.
+\(`getprod.php`\) as "for the whole western region", which I am
+inclined to read as "is not for areas _not_ in the "western region."
+Well hey, why be consistent? It only scares the cats.
 
 However, as cats have been known on occasion to be scared of nothing, I
 tried New York City \(xxxMTRjfk\) and Miami Florida \(xxxMTRmia\), and
@@ -24,6 +24,10 @@ Moscow for all I know. My cats concur, and additionally note that mice
 exist in all these regions, so the weather everywhere needs to be known
 in order that one doesn't go outside to catch mice and find one's ears
 and tail exposed to unacceptably low temperatures.
+
+I find the whole thing inconsistantly consistent, which is consistent
+with my general impression of pretty much everything the USG is involved
+in.
 
 ## Configuration
 
