@@ -20,8 +20,9 @@ Arizona, which I am reasonably sure is somewhere out west, perhaps near
 Hawaii or Guam.
 
 Well hey, why should they be consistent? It only scares the cats.
-However, as cats have been known on occasion to be scared of nothing,
-and I have some serious trust issues, I tried New York City
+However, as cats have been known on occasion to be scared of things that
+aren't there \(they also sometimes attack things that aren't there, but
+I digress\), and I have some serious trust issues, I tried New York City
 \(xxxMTRjfk\) and Miami Florida \(xxxMTRmia\), and... both of those worked
 fine. As does Los Angeles \(xxxMTRlax\) So I don't quite know what to
 make of their pronouncement. Obsolete information? Who knows, it's the
