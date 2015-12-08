@@ -1,14 +1,25 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# NOTE: requires wget command
+# NOTE: requires wget command. Put location of command here, include trailing /:
 
-import os,sys
+wgetloc = '/usr/local/bin/'
 
 fn = 'nwsdata.txt'
-stationid = "xxxMTRggw"
-#stationid = "xxxMTRjfk"
-#stationid = "xxxMTRmia"
+stationid = "xxxMTRggw"		# Glasgow, MT - this works
+#stationid = "xxxMTRjfk"	# JFK airport, NYC, NY - this works
+#stationid = "xxxMTRmia"	# Miami, FL - this works
+
+import os,sys
+import subprocess
+
+version = sys.version_info
+if version[0] != 2:
+	print 'Requires Python 2'
+	exit()
+if version[1] < 4:
+	print 'Requires higher than Python 2.3'
+	exit()
 
 # Mode:
 #       0 Celsius
@@ -37,11 +48,11 @@ mode = 1
 #                 consequences of this are entirely yours. Have you written your congresscritter
 #                 about patent and copyright reform yet?
 #  Incep Date: November 24th, 2015
-#     LastRev: November 25th, 2015
-#  LastDocRev: November 25th, 2015
+#     LastRev: December 25th, 2015
+#  LastDocRev: December 25th, 2015
 # Tab spacing: 4 (set your editor to this for sane formatting while reading)
-#     Dev Env: Ubuntu 12.04.5 LTS, Python 2.7.3, Apache2
-#  Also works: OS X 10.6.8
+#     Dev Env: Ubuntu 12.04.5 LTS, Python 2.7.3
+#  Also works: OS X 10.6.8, Python 2.6.1
 #      Status: BETA
 #    Policies:  I will make every effort to never remove functionality or
 #               alter existing functionality once past BETA stage. Anything
@@ -59,6 +70,11 @@ mode = 1
 #               more, or even at all, reliable. Read "Disclaimers", above. Did
 #               I mention you should read the disclaimers? Because you know,
 #               you really should. Several times. Read the disclaimers, that is.
+# ------------------------------------------------------------------------------
+#     Changes:
+#         0.2:	No longer uses tmp file. Pipes wget into Python instead.
+#				Checks Python version and adjusts pipe mechanism
+#		  0.0:	(Unversioned) Original Release
 
 # Here's what is in the typical NWS METAR data chunk we're fetching:
 # ==================================================================
@@ -89,13 +105,31 @@ mode = 1
 #       | | ||    |   | |  |     |   |   |     |   |  |   |   | |    |   |  |  |  ||  |
 # KGGW 190053Z AUTO 29022G30KT CLR M02/M14 A2983 AO2 PK WND 30038/0003 SLP125 T10221144
 
+# --------------------------------------------------------------------
+# The piping was extremely finicky to get going. Under Python 2.6, the
+# tx parameter has to be enclosed in double quotes. Under 2.7, it cannot
+# be so enclosed. 2.7 takes a sequence as documented; but 2.6 would not
+# take a sequence, and required a string, which is *not* what the
+# Python documentation for 2.6 says. I've got this switching how it
+# works based on Python 2.7 and above, or lesser; but I've little
+# confidence that it will actually perform on anything but the two
+# versions I've actually tested it on. Any further versioning you do
+# will be of interest to me (other than Python 3, of course. That's no
+# more Python than a Chicago deep-dish cassarole is a proper pizza.)
+# --------------------------------------------------------------------
+
 # Go get the NWS data:
 # --------------------
-t = 'wget -q -O %s "http://www.wrh.noaa.gov/total_forecast/getprod.php?toggle=textonly&afos=%s"' % (fn,stationid)
-os.system(t)
-fh = open(fn)
-da = fh.read()
-fh.close()
+if version[1] < 7:
+	tx = '"http://www.wrh.noaa.gov/total_forecast/getprod.php?toggle=textonly&afos=%s"' % (stationid)
+	cmdlist = ['%swget' % wgetloc,'-q','-O','-',tx]
+	cmdstr = ' '.join(cmdlist)
+	p = subprocess.Popen(cmdstr,stdout=subprocess.PIPE,shell=True)
+	da,err = p.communicate()
+else:
+	tx = 'http://www.wrh.noaa.gov/total_forecast/getprod.php?toggle=textonly&afos=%s' % (stationid)
+	cmdlist = ['%swget' % wgetloc,'-q','-O','-',tx]
+	da = subprocess.check_output(cmdlist)
 
 # Now clean it up. No pre tags, no linefeeds, no leading/trailign white space
 # ---------------------------------------------------------------------------

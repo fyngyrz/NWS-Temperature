@@ -2,9 +2,11 @@
 
 ## What it Does
 
-Fetches the temperature (in Cº) from the NWS aviation ground conditions
-forecast. Then it converts that value to Fahrenheit \(See Below\) or another
-scale according to its `mode` setting, and prints the result out.
+Fetches the temperature \(in Cº\) from the NWS aviation ground conditions
+forecast by using the `wget` command, the output of which it pipes
+back into itself. Then it extractss, then converts, the temperature value
+in that forecast to Fahrenheit \(See Below\) or another scale according
+to its `mode` setting, and prints the result out.
 
 ## Limits
 
@@ -13,25 +15,38 @@ as "for the whole western region", which I would read as "is not
 for areas _not_ in the "western region." Well hey, why be consistent?
 It only scares the cats.
 
-However, I tried New York City \(xxxMTRjfk\) and Miami Florida
-\(xxxMTRmia\), and it worked fine. So I don't quite know what to make of
-their pronoucement. Obsolete information? Who knows, it's the USG.
-"Western region" could mean everything west of Moscow for all I know.
-Anyway...
+However, as cats have been known on occasion to be scared of nothing, I
+tried New York City \(xxxMTRjfk\) and Miami Florida \(xxxMTRmia\), and
+both of those worked fine. So I don't quite know what to make of their
+pronouncement. Obsolete information? Who knows, it's the USG. "Western
+region" could mean everything west of Moscow for all I know. My cats
+concur, and additionally note that mice exist in all these regions, so
+the weather everywhere needs to be known in order that one doesn't go
+outside to catch mice and find one's tail exposed to unacceptably low
+temperatures.
 
 ## Configuration
 
-Change the **stationid** variable at the top of the file to the
+First, change `wgetloc` to the path to the `wget` command, including a
+trailing `/` character. For instance, on my system, wget is in
+`/usr/local/bin`; so I have set `wgetloc` this way:
+
+```python
+wgetloc = '/usr/local/bin/'
+```
+
+Next, change the `stationid` variable at the top of the file to the
 appropriate code for your location.
 
 Mine is "xxxMTRggw", yours will be similar. Thats xxx, followed by MTR
 for the METAR product, and then "ggw" for my NWS weather station ID,
-which is actually "kggw", but I guess the "k" doesn't count.
+which is actually "kggw", but I guess the "k" doesn't count, because
+government, k?
 
 There is a list of station codes **[on this page](http://www.datasink.com/cgi-bin/stationCodes.cgi)**.
 
-So for instance, I find my station by searching the page
-for "Glasgow", and there it is, "kggw"
+So for instance, I find my station by searching the page for "Glasgow",
+and there it is, Glasgow MT, "kggw"
 
 I remove the k, and construct xxx + MTR + ggw = xxxMTRggw
 
@@ -44,7 +59,7 @@ The default is to output in degrees Fahrenheit. If you want degrees
 Celsius, Kelvin, Rankine or Réaumur, set `mode` at the top of the python source code.
 The modes are described in the source code. But be sure to read the following:
 
-## Why Fahrenheit is For People
+## Why Fahrenheit is For People. And cats.
 
 Scale | Zero | Twenty Five | Fifty | Seventy Five | 100º  
 ----- | ---- | ----------- | ----- | ------------ | ---  
