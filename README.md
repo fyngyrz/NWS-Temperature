@@ -11,10 +11,15 @@ to its `mode` setting, and prints the result out.
 ## Limits
 
 The NWS identifies the software that I'm getting the temperature from
-\(`getprod.php`\) as "for the whole western region", which I am
-inclined to read as "is not for areas _not_ in the "western region."
-Well hey, why be consistent? It only scares the cats.
+\(`getprod.php`\) as "for the whole western region", which I am inclined
+to \(wholly incorrectly, as it turns out\) read as "is not for areas
+_not_ in the "western region." Which in turn you might be inclined to
+view as disappointing if, for instance, you live on the east coast and
+really don't care what the weather is in, oh, I don't know, Tempe
+Arizona, which I am reasonably sure is somewhere out west, perhaps near
+Japan.
 
+Well hey, why should they be consistent? It only scares the cats.
 However, as cats have been known on occasion to be scared of nothing, I
 tried New York City \(xxxMTRjfk\) and Miami Florida \(xxxMTRmia\), and
 both of those worked fine. As does Los Angeles \(xxxMTRlax\) So I don't
