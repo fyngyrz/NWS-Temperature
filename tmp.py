@@ -5,7 +5,6 @@
 
 wgetloc = '/usr/local/bin/'
 
-fn = 'nwsdata.txt'
 stationid = "xxxMTRggw"		# Glasgow, MT - this works
 #stationid = "xxxMTRjfk"	# JFK airport, NYC, NY - this works
 #stationid = "xxxMTRmia"	# Miami, FL - this works

@@ -4,7 +4,7 @@
 
 Fetches the temperature \(in Cº\) from the NWS aviation ground conditions
 forecast by using the `wget` command, the output of which it pipes
-back into itself. Then it extractss, then converts, the temperature value
+back into itself. Then it extracts, then converts, the temperature value
 in that forecast to Fahrenheit \(See Below\) or another scale according
 to its `mode` setting, and prints the result out.
 
@@ -22,8 +22,8 @@ pronouncement. Obsolete information? Who knows, it's the USG. "Western
 region" could mean everything west of Moscow for all I know. My cats
 concur, and additionally note that mice exist in all these regions, so
 the weather everywhere needs to be known in order that one doesn't go
-outside to catch mice and find one's tail exposed to unacceptably low
-temperatures.
+outside to catch mice and find one's ears and tail exposed to unacceptably
+low temperatures.
 
 ## Configuration
 
@@ -45,10 +45,17 @@ government, k?
 
 There is a list of station codes **[on this page](http://www.datasink.com/cgi-bin/stationCodes.cgi)**.
 
-So for instance, I find my station by searching the page for "Glasgow",
-and there it is, Glasgow MT, "kggw"
+So for instance, I find my station by searching that page for "Glasgow",
+and there it is, Glasgow MT, "kggw":
 
-I remove the k, and construct xxx + MTR + ggw = xxxMTRggw
+![Station Code Search](http://fyngyrz.com/images/kggw.png)  
+
+I remove the k, and construct xxx + MTR + ggw = xxxMTRggw. It looks like
+this  on my system:
+
+```python
+stationid = "xxxMTRggw"
+```
 
 That's the process, but again, this may only work in the "western region."
 Which is apparently anything west of Bermuda. :)
