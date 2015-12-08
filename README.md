@@ -74,7 +74,8 @@ stationid = "xxxMTRggw"
 ```
 
 That's the process, but again, this may only work in the "western region."
-Which is apparently anything west of Bermuda. :)
+Which is apparently anything west of Bermuda. Other than Alaska. Which is
+apparently east of... something. :)
 
 ![West of Bermuda...](http://fyngyrz.com/images/bermuda2.png)  
 
