@@ -97,6 +97,31 @@ apparently east of... something. :)
 * `-ra` or `--rankine` \(mode 3\)
 * `-re` or `--reaumur` \(mode 4\) \(note use of `e`, not `é`\)
 
+## Other Issues
+
+This Python script has the usual incantation at the top of the file that
+tells the operating system how to execute it without having to type
+`Python` first:
+
+```
+#!/usr/bin/python
+```
+
+You might have to change the location so that works.  For instance, to
+make it work on both my OS X and my Linux systems, I have to make such a
+change. Python is in `/usr/bin/` on one, and `/usr/local/bin` on the
+other.
+
+If that's done, then it can be executed in the current directory with
+`./tmp.py` instead of `python tmp.py` and it can also be moved to
+somewhere in your path \(like `/usr/bin`\) so you can execute it by
+typing `tmp.py`
+
+Also worthy of note is that under these circumstances it doesn't care
+what it is called, so you can drop the `.py` by renaming it to something
+a little easier to type, such as `temp` or whatever, allowing command
+line entry of just that, which is yet a little easier.
+
 ## Default Operation
 
 With no command line option supplied, the default behavior is to
