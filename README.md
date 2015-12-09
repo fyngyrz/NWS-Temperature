@@ -50,7 +50,8 @@ in.
 
 I should note that Anchorage, AK, \(`xxxMTRanc`\) did *not* work. Despite
 being well west of where I am \(IIRC my history, Seward discovered it
-somewhere in Russia.\) So there's that, too.
+somewhere in Russia.\) So there's that, too. On second thought, perhaps
+they simply want us to take "western region" to mean "south of Canada."
 
 ## Configuration
 
