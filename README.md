@@ -4,7 +4,7 @@
 
 * Known Working Under:
   * rPi, Raspbian, 7.6
-  * OS X 10.6.8
+  * OS X 10.6.8 \(Snow Leopard\)
   * Ubuntu 12.04.5 LTS \(Precise Pangolin\)
 * Python 2.6 or 2.7 \(If you desire Python 3, time to fork.\)
 * Standard Python imports: `sys`, `subprocess`
