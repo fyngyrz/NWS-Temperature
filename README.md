@@ -35,8 +35,8 @@ Well hey, why should they be consistent? It only scares the cats.
 However, as cats have been known on occasion to be scared of things that
 aren't there \(they also sometimes attack things that aren't there, but
 I digress\), and I have some serious trust issues, I tried New York City
-\(`xxxMTRjfk`\) and Miami Florida \(`xxxMTRmia`\), and... both of those worked
-fine. As does Los Angeles \(`xxxMTRlax`\) So I don't quite know what to
+\(`jfk`\) and Miami Florida \(`mia`\), and... both of those worked
+fine. As does Los Angeles \(`lax`\) So I don't quite know what to
 make of their pronouncement. Obsolete information? Who knows, it's the
 USG. "Western region" could mean everything west of Moscow for all I
 know. My cats concur, and additionally note that mice exist in all these
@@ -48,10 +48,11 @@ I find the whole thing inconsistantly consistent, which is consistent
 with my general impression of pretty much everything the USG is involved
 in.
 
-I should note that Anchorage, AK, \(`xxxMTRanc`\) did *not* work. Despite
-being well west of where I am \(IIRC my history, Seward discovered it
-somewhere in Russia.\) So there's that, too. On second thought, perhaps
-they simply want us to take "western region" to mean "south of Canada."
+I should note that Anchorage, AK, \(either of `anc` or `aed`\) did *not*
+work. Despite being well west of where I am \(IIRC my history, Seward
+discovered it somewhere in Russia.\) So there's that, too. On second
+thought, perhaps they simply want us to take "western region" to mean
+"south of Canada."
 
 ## Configuration
 
