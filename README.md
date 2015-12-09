@@ -1,8 +1,11 @@
 # tmp.py - NWS Temperature Data Fetch
 
-## Tech
+## Requirements
 
-Python 2. If you desire Python 3, time to fork.  :\)
+* Python 2.6 or 2.7 \(If you desire Python 3, time to fork.\)
+* OS X or Linux
+* Network connection
+* `wget` command
 
 ## What it Does
 
