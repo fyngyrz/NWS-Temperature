@@ -133,7 +133,7 @@ if wgetloc == '':
 	print "The wget command doesn't seem to be installed. It's required."
 	exit()
 
-stationid = "xxxMTR%s" % (stationid)
+stationid = "xxxMTR%s" % (stationid.lower())
 
 omode = mode
 	
