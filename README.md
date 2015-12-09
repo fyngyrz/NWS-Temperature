@@ -2,9 +2,13 @@
 
 ## Requirements
 
+* Known Working Under:
+  * rPi 7.6
+  * OS X 10.6.8
+  * Ubuntu 12.04.5 LTS \(Precise Pangolin\)
 * Python 2.6 or 2.7 \(If you desire Python 3, time to fork.\)
-* OS X or Linux \(perhaps Windows if you have `wget` and are clever\)
-* Network connection
+* Standard Python imports: `sys`, `subprocess`
+* Network connection w/DNS
 * `wget` command
 
 ## What it Does

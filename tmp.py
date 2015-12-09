@@ -27,7 +27,7 @@ stationid	= "xxxMTRggw"	# Glasgow, MT - this works
 # ------------------
 mode = 1 # This is the default mode you prefer. Override with --mode or -m
 
-import os,sys
+import sys
 import subprocess
 
 version = sys.version_info
