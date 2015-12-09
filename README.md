@@ -54,18 +54,11 @@ somewhere in Russia.\) So there's that, too.
 
 ## Configuration
 
-First, change `wgetloc` to the path to the `wget` command, including a
-trailing `/` character. For instance, on my system, wget is in
-`/usr/local/bin`; so I have set `wgetloc` this way:
-
-```python
-wgetloc = '/usr/local/bin/'
-```
-
-Next, you probably want to change the `stationid` variable at the top of
+You probably want to change the `stationid` variable at the top of
 the file to the appropriate code for your location. You don't have to, as
 this can be set via a command line option \(-s or --station\), but it's
-convenient.
+convenient so you can just run the command with no parameters and get
+the temperature you're most often interested in.
 
 The default is `xxxMTRggw` \(some of the most extreme cold temperatures in the nation\), yours will be similar. Thats `xxx`, followed by `MTR`
 for the METAR product, and then `ggw` for the NWS weather station ID,

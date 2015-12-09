@@ -1,42 +1,32 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Three items to set up:
-# ----------------------
+# Two defaults I suggest you set up:
+# ----------------------------------
 
-# (1) Put location of wget command here, include trailing /:
-# --------========------------------------------------------
-wgetloc = '/usr/local/bin/'
-
-# (2) Construct stationid (see "Configuration" in README.md)
-# --------------=========-----------------------------------
+# (1) Construct default stationid (see "Configuration" in README.md)
+# You can override this with -s or --station. i.e. "./tmp.py -s lax"
+# ----------------------=========-----------------------------------
 stationid	= "xxxMTRggw"	# Glasgow, MT - this works
 #stationid	= "xxxMTRanc"	# Anchorage, AK - this does NOT work
 #stationid	= "xxxMTRlax"	# Los Angeles, CA - this works
 #stationid	= "xxxMTRjfk"	# JFK airport, NYC, NY - this works
 #stationid	= "xxxMTRmia"	# Miami, FL - this works
 
-# (3) Set mode for the temperature scale you prefer:
-# --------====--------------------------------------
-# Mode:
+# (2) Set mode for the temperature scale you prefer (F is best for humans):
+# You can override this with -m/--mode N, -c/--celsius, -k/--kelvin, etc.
+# --------====-------------------------------------------------------------
+# mode:
 #       0 Celsius
 #       1 Fahrenheit
 #       2 Kelvin
 #       3 Rankine
 #       4 Réaumur
 # ------------------
-mode = 1 # This is the default mode you prefer. Override with --mode or -m
+mode = 1 # This is the default mode you prefer.
 
-import sys
-import subprocess
-
-version = sys.version_info
-if version[0] != 2:
-	print 'Requires Python 2'
-	exit()
-if version[1] < 4:
-	print 'Requires higher than Python 2.3'
-	exit()
+# CODE below this line you probably don't need to worry about
+# -----------------------------------------------------------
 
 #     Project: tmp.py
 #      Author: fyngyrz  (Ben)
@@ -59,7 +49,7 @@ if version[1] < 4:
 #     LastRev: December 26th, 2015
 #  LastDocRev: December 26th, 2015
 # Tab spacing: 4 (set your editor to this for sane formatting while reading)
-#     Dev Env: Ubuntu 12.04.5 LTS, Python 2.7.3
+#Dev/Test Env: Ubuntu 12.04.5 LTS, Python 2.7.3, Raspbian 7.6
 #  Also works: OS X 10.6.8, Python 2.6.1
 #      Status: BETA
 #    Policies:  I will make every effort to never remove functionality or
@@ -79,10 +69,11 @@ if version[1] < 4:
 #               I mention you should read the disclaimers? Because you know,
 #               you really should. Several times. Read the disclaimers, that is.
 # ------------------------------------------------------------------------------
-#     Version: 0.4
+#     Version: 0.5
 #     Changes:
-#         0.4:  ++command line option for station ID
-#         0.3:  ++command line options, some error checking
+#         0.5:	++tests for wget and reports if missing, autocofigs it
+#         0.4:	++command line option for station ID
+#         0.3:	++command line options, some error checking
 #         0.2:	No longer uses tmp file. Pipes wget into Python instead.
 #				Checks Python version and adjusts pipe mechanism
 #		  0.0:	(Unversioned) Original Release
@@ -115,6 +106,32 @@ if version[1] < 4:
 #       | | ||    |   | |  |     |   |   |     |   |  |   |   | |    |   |  |  |  ||  +- 14/4c dewpoint
 #       | | ||    |   | |  |     |   |   |     |   |  |   |   | |    |   |  |  |  ||  |
 # KGGW 190053Z AUTO 29022G30KT CLR M02/M14 A2983 AO2 PK WND 30038/0003 SLP125 T10221144
+
+import sys
+import subprocess
+
+version = sys.version_info
+if version[0] != 2:
+	print 'Requires Python 2'
+	exit()
+if version[1] < 4:
+	print 'Requires higher than Python 2.3'
+	exit()
+
+# Locate wget command
+# -------------------
+cmdlist = ['which','wget']
+if version[1] < 7:
+	cmdstr = ' '.join(cmdlist)
+	p = subprocess.Popen(cmdstr,stdout=subprocess.PIPE,shell=True)
+	wgetloc,err = p.communicate()
+else:
+	wgetloc = subprocess.check_output(cmdlist)
+wgetloc = wgetloc.strip()
+
+if wgetloc == '':
+	print "The wget command doesn't seem to be installed. It's required."
+	exit()
 
 omode = mode
 	
@@ -191,13 +208,13 @@ if len(sys.argv) > 1:
 # --------------------
 if version[1] < 7:
 	tx = '"http://www.wrh.noaa.gov/total_forecast/getprod.php?toggle=textonly&afos=%s"' % (stationid)
-	cmdlist = ['%swget' % wgetloc,'-q','-O','-',tx]
+	cmdlist = ['%s' % wgetloc,'-q','-O','-',tx]
 	cmdstr = ' '.join(cmdlist)
 	p = subprocess.Popen(cmdstr,stdout=subprocess.PIPE,shell=True)
 	da,err = p.communicate()
 else:
 	tx = 'http://www.wrh.noaa.gov/total_forecast/getprod.php?toggle=textonly&afos=%s' % (stationid)
-	cmdlist = ['%swget' % wgetloc,'-q','-O','-',tx]
+	cmdlist = ['%s' % wgetloc,'-q','-O','-',tx]
 	da = subprocess.check_output(cmdlist)
 
 # Now clean it up. No pre tags, no linefeeds, no leading/trailign white space
