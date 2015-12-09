@@ -93,7 +93,7 @@ apparently east of... something. :)
 
 With no command line option supplied, the default behavior is to output
 in degrees Fahrenheit. If you want it to default to degrees
-Celsius, Kelvin, Rankine or Réaumur, set `mode` at the top of the python source code.
+Celsius, Kelvin, Rankine or Réaumur, set `mode` at the top of the Python source code.
 The default mode settings are described in the source code. But be sure
 to consider the following:
 
