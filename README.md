@@ -3,7 +3,7 @@
 ## Requirements
 
 * Python 2.6 or 2.7 \(If you desire Python 3, time to fork.\)
-* OS X or Linux \(perhaps Windows if you have wget and are clever\)
+* OS X or Linux \(perhaps Windows if you have `wget` and are clever\)
 * Network connection
 * `wget` command
 
