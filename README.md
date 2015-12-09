@@ -88,7 +88,7 @@ apparently east of... something. :)
 * `-f` or `--fahrenheit` \(mode 1\)
 * `-k`  or `--kelvin` \(mode 2\)
 * `-ra` or `--rankine` \(mode 3\)
-* `-re` or `--reaumur` \(mode 4\) \(note "--" uses `e`, not `é`\)
+* `-re` or `--reaumur` \(mode 4\) \(note use of `e`, not `é`\)
 
 ## Default Operation
 
