@@ -79,7 +79,7 @@ apparently east of... something. :)
 
 ![West of Bermuda...](http://fyngyrz.com/images/bermuda2.png)  
 
-## Command line options
+## Command Line Options
 
 * `-h` or `--help` or `?`
 * `-m` or `--mode` followed by integer 0...4\*
