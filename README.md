@@ -55,7 +55,7 @@ Next, change the `stationid` variable at the top of the file to the
 appropriate code for your location.
 
 The default is `xxxMTRggw`, yours will be similar. Thats `xxx`, followed by `MTR`
-for the METAR product, and then `ggw` for my NWS weather station ID,
+for the METAR product, and then `ggw` for the NWS weather station ID,
 which is actually `kggw`, but I guess the `k` doesn't count, because
 government, k?
 
