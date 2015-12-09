@@ -2,11 +2,12 @@
 
 ## What it Does
 
-Fetches the temperature \(in Cº\) from the NWS aviation ground conditions
-forecast by using the `wget` command, the output of which it pipes
-back into itself. Then it extracts, then converts, the temperature value
-in that forecast to Fahrenheit \(See Below\) or another scale according
-to its `mode` setting, and prints the result out.
+Fetches the temperature \(in Cº\) from the NWS aviation ground
+conditions forecast by using the `wget` command, the output of which it
+pipes back into itself. Then it extracts, then converts, the temperature
+value in that forecast to Fahrenheit \(See Below\) or another scale
+according to its default `mode` setting  or a supplied command line
+option, and prints the result out.
 
 ## Limits
 
