@@ -73,7 +73,7 @@ and there it is, Glasgow, "KGGW":
 ![Station Code Search](http://fyngyrz.com/images/kggw.png)  
 
 Remove the first letter, and use the remaining three.
-The code is not case-sensitive.
+The station code you put in is not case-sensitive.
 The default looks like this:
 
 ```python
