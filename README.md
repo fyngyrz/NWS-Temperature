@@ -100,8 +100,8 @@ apparently east of... something. :)
 ## Other Issues
 
 This Python program has the usual incantation at the top of the file
-that tells the operating system how to execute it without having to type
-`python` first:
+that tells \*nix-flavored operating systems how to execute it without
+having to type `python` first:
 
 ```python
 #!/usr/bin/python
