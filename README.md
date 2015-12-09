@@ -61,7 +61,7 @@ convenient so you can just run the command with no parameters and get
 the temperature you're most often interested in.
 
 The default is `ggw` \(some of the most extreme cold temperatures in the
-nation\), yours will be a different three-letter code.
+nation, so kind of fun\), yours will be a different three-letter code.
 
 There is a list of station codes **[on this page](http://www.datasink.com/cgi-bin/stationCodes.cgi)**.
 
