@@ -61,8 +61,8 @@ government, k?
 
 There is a list of station codes **[on this page](http://www.datasink.com/cgi-bin/stationCodes.cgi)**.
 
-So for instance, I find my station by searching that page for "Glasgow",
-and there it is, Glasgow MT, "KGGW":
+So for instance, I might find a station by searching that page for "Glasgow",
+and there it is, Glasgow, "KGGW":
 
 ![Station Code Search](http://fyngyrz.com/images/kggw.png)  
 
