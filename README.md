@@ -2,7 +2,7 @@
 
 ## Tech
 
-Python 2. If you desire Python 3, time to fork.  :)
+Python 2. If you desire Python 3, time to fork.  :\)
 
 ## What it Does
 
