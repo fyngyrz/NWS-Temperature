@@ -1,5 +1,9 @@
 # tmp.py - NWS Temperature Data Fetch
 
+## Tech
+
+Python 2. If you desire Python 3, time to fork.  :)
+
 ## What it Does
 
 Fetches the temperature \(in Cº\) from the NWS aviation ground
