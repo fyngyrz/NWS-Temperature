@@ -55,8 +55,10 @@ trailing `/` character. For instance, on my system, wget is in
 wgetloc = '/usr/local/bin/'
 ```
 
-Next, change the `stationid` variable at the top of the file to the
-appropriate code for your location.
+Next, you probably want to change the `stationid` variable at the top of
+the file to the appropriate code for your location. You don't have to, as
+this can be set via a command line option \(-s or --station\), but it's
+convenient.
 
 The default is `xxxMTRggw` \(some of the most extreme cold temperatures in the nation\), yours will be similar. Thats `xxx`, followed by `MTR`
 for the METAR product, and then `ggw` for the NWS weather station ID,
@@ -87,6 +89,7 @@ apparently east of... something. :)
 ## Command Line Options
 
 * `-h` or `--help` or `?`
+* `-s` or `--station` followed by 3-letter station ID, i.e. `ggw`
 * `-m` or `--mode` followed by integer 0...4\*
 * `-c` or `--centigrade` \(mode 0\)
 * `-f` or `--fahrenheit` \(mode 1\)
@@ -96,8 +99,9 @@ apparently east of... something. :)
 
 ## Default Operation
 
-With no command line option supplied, the default behavior is to output
-in degrees Fahrenheit. If you want it to default to degrees
+With no command line option supplied, the default behavior is to
+use the configured default station ID and to
+output in degrees Fahrenheit. If you want it to default to degrees
 Celsius, Kelvin, Rankine or Réaumur, change `mode` at the top of the Python source code accordingly.
 The default mode settings are described in the source code. But be sure
 to consider the following:

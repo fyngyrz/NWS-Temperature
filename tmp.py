@@ -79,8 +79,9 @@ if version[1] < 4:
 #               I mention you should read the disclaimers? Because you know,
 #               you really should. Several times. Read the disclaimers, that is.
 # ------------------------------------------------------------------------------
-#     Version: 0.3
+#     Version: 0.4
 #     Changes:
+#         0.4:  ++command line option for station ID
 #         0.3:  ++command line options, some error checking
 #         0.2:	No longer uses tmp file. Pipes wget into Python instead.
 #				Checks Python version and adjusts pipe mechanism
@@ -121,6 +122,7 @@ mnames = ['centigrade','fahrenheit','kelvin','rankine','reaumur']
 def help():
 	global omode,mnames
 	print 'Without parameters, uses default mode of %s' % (mnames[omode])
+	print '-s or --station  [3-letter station ID, ie ggw]'
 	print '-h or --help or ?'
 	print '-m or --mode [int] (int 0-4 = c,f,k,ra,re)'
 	print '-c or --centigrade'
@@ -134,6 +136,7 @@ if omode < 0 or omode > 4:
 	exit()
 
 mflag = False
+sflag = False
 if len(sys.argv) > 1:
 	for arg in sys.argv[1:]:
 		if arg == '-m' or arg == '--mode':
@@ -141,6 +144,8 @@ if len(sys.argv) > 1:
 		elif arg == '?' or arg == '-h' or arg == '--help':
 			help()
 			exit()
+		elif arg == '-s' or arg == '--station':
+			sflag = True
 		elif arg == '-c' or arg == '--centigrade': # c f k ra re
 			mode = 0
 		elif arg == '-f' or arg == '--fahrenheit': # c f k ra re
@@ -151,6 +156,11 @@ if len(sys.argv) > 1:
 			mode = 3
 		elif arg == '-re' or arg == '--reaumur': # c f k ra re
 			mode = 4
+		elif sflag == True:
+			if len(arg) != 3:
+				print '-s/--station requires a 3-letter station ID'
+				exit()
+			stationid = 'xxxMTR%s' % (arg.lower())
 		elif mflag == True:
 			mflag = False
 			try:
