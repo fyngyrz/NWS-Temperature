@@ -109,7 +109,7 @@ tells the operating system how to execute it without having to type
 
 You might have to change the location so that works.  For instance, to
 make it work on both my OS X and my Linux systems, I have to make such a
-change. Python is in `/usr/bin/` on one, and `/usr/local/bin` on the
+change. Python is in `/usr/bin` on one, and `/usr/local/bin` on the
 other.
 
 If that's done, then it can be executed in the current directory with
