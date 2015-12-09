@@ -25,7 +25,7 @@ stationid	= "xxxMTRggw"	# Glasgow, MT - this works
 #       3 Rankine
 #       4 Réaumur
 # ------------------
-mode = 1
+mode = 1 # This is the default mode you prefer. Override with --mode or -m
 
 import os,sys
 import subprocess
@@ -56,8 +56,8 @@ if version[1] < 4:
 #                 consequences of this are entirely yours. Have you written your congresscritter
 #                 about patent and copyright reform yet?
 #  Incep Date: November 24th, 2015
-#     LastRev: December 25th, 2015
-#  LastDocRev: December 25th, 2015
+#     LastRev: December 26th, 2015
+#  LastDocRev: December 26th, 2015
 # Tab spacing: 4 (set your editor to this for sane formatting while reading)
 #     Dev Env: Ubuntu 12.04.5 LTS, Python 2.7.3
 #  Also works: OS X 10.6.8, Python 2.6.1
@@ -79,7 +79,9 @@ if version[1] < 4:
 #               I mention you should read the disclaimers? Because you know,
 #               you really should. Several times. Read the disclaimers, that is.
 # ------------------------------------------------------------------------------
+#     Version: 0.3
 #     Changes:
+#         0.3:  ++command line options, some error checking
 #         0.2:	No longer uses tmp file. Pipes wget into Python instead.
 #				Checks Python version and adjusts pipe mechanism
 #		  0.0:	(Unversioned) Original Release
@@ -112,6 +114,55 @@ if version[1] < 4:
 #       | | ||    |   | |  |     |   |   |     |   |  |   |   | |    |   |  |  |  ||  +- 14/4c dewpoint
 #       | | ||    |   | |  |     |   |   |     |   |  |   |   | |    |   |  |  |  ||  |
 # KGGW 190053Z AUTO 29022G30KT CLR M02/M14 A2983 AO2 PK WND 30038/0003 SLP125 T10221144
+
+omode = mode
+	
+mnames = ['centigrade','fahrenheit','kelvin','rankine','reaumur']
+def help():
+	global omode,mnames
+	print 'Without parameters, uses default mode of %s' % (mnames[omode])
+	print '-h or --help or ?'
+	print '-m or --mode [int] (int 0-4 = c,f,k,ra,re)'
+	print '-c or --centigrade'
+	print '-k or --kelvin'
+	print '-f or --fahrenheit'
+	print '-ra or --rankine'
+	print '-re or --reaumur'
+
+if omode < 0 or omode > 4:
+	print 'ERROR: invalid default mode: Must be 0...4'
+	exit()
+
+mflag = False
+if len(sys.argv) > 1:
+	for arg in sys.argv[1:]:
+		if arg == '-m' or arg == '--mode':
+			mflag = True
+		elif arg == '?' or arg == '-h' or arg == '--help':
+			help()
+			exit()
+		elif arg == '-c' or arg == '--centigrade': # c f k ra re
+			mode = 0
+		elif arg == '-f' or arg == '--fahrenheit': # c f k ra re
+			mode = 1
+		elif arg == '-k' or arg == '--kelvin': # c f k ra re
+			mode = 2
+		elif arg == '-ra' or arg == '--rankine': # c f k ra re
+			mode = 3
+		elif arg == '-re' or arg == '--reaumur': # c f k ra re
+			mode = 4
+		elif mflag == True:
+			mflag = False
+			try:
+				mode = int(arg)
+				if mode < 0 or mode > 4:
+					raise
+			except:
+				print '-m / --mode option requires an integer [0-4]'
+				exit()
+		else:
+			help()
+			exit()
 
 # --------------------------------------------------------------------
 # The piping was extremely finicky to get going. Under Python 2.6, the

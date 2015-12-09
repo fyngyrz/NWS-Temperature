@@ -79,10 +79,25 @@ apparently east of... something. :)
 
 ![West of Bermuda...](http://fyngyrz.com/images/bermuda2.png)  
 
-The default is to output in degrees Fahrenheit. If you want degrees
+## Command line options
+
+* `-h` or `--help` or `?`
+* `-m` or `--mode` followed by integer 0...4\*
+* `-c` or `--centigrade` \(mode 0\)
+* `-f` or `--fahrenheit` \(mode 1\)
+* `-k`  or `--kelvin` \(mode 2\)
+* `-ra` or `--rankine` \(mode 3\)
+* `-re` or `--reaumur` \(mode 4\) \(note "--" uses `e`, not `é`\)
+
+## Default Operation
+
+With no command line option supplied, the default behavior is to output
+in degrees Fahrenheit. If you want it to default to degrees
+
 Celsius, Kelvin, Rankine or Réaumur, set `mode` at the top of the python source code.
-The modes are described in the source code. But be sure to consider the
-following:
+
+The default mode settings are described in the source code. But be sure
+to consider the following:
 
 ## Why Fahrenheit is For People. And cats.
 
