@@ -4,14 +4,14 @@
 # Two defaults I suggest you set up:
 # ----------------------------------
 
-# (1) Construct default stationid (see "Configuration" in README.md)
+# (1) Default stationid (see "Configuration" in README.md)
 # You can override this with -s or --station. i.e. "./tmp.py -s lax"
 # ----------------------=========-----------------------------------
-stationid	= "xxxMTRggw"	# Glasgow, MT - this works
-#stationid	= "xxxMTRanc"	# Anchorage, AK - this does NOT work
-#stationid	= "xxxMTRlax"	# Los Angeles, CA - this works
-#stationid	= "xxxMTRjfk"	# JFK airport, NYC, NY - this works
-#stationid	= "xxxMTRmia"	# Miami, FL - this works
+stationid	= "ggw"	# Glasgow, MT - this works
+#stationid	= "anc"	# Anchorage, AK - this does NOT work
+#stationid	= "lax"	# Los Angeles, CA - this works
+#stationid	= "jfk"	# JFK airport, NYC, NY - this works
+#stationid	= "mia"	# Miami, FL - this works
 
 # (2) Set mode for the temperature scale you prefer (F is best for humans):
 # You can override this with -m/--mode N, -c/--celsius, -k/--kelvin, etc.
@@ -132,6 +132,8 @@ wgetloc = wgetloc.strip()
 if wgetloc == '':
 	print "The wget command doesn't seem to be installed. It's required."
 	exit()
+
+stationid = "xxxMTR%s" % (stationid)
 
 omode = mode
 	

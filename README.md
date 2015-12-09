@@ -60,10 +60,8 @@ this can be set via a command line option \(-s or --station\), but it's
 convenient so you can just run the command with no parameters and get
 the temperature you're most often interested in.
 
-The default is `xxxMTRggw` \(some of the most extreme cold temperatures in the nation\), yours will be similar. Thats `xxx`, followed by `MTR`
-for the METAR product, and then `ggw` for the NWS weather station ID,
-which is actually `kggw`, but I guess the `k` doesn't count, because
-government, k?
+The default is `ggw` \(some of the most extreme cold temperatures in the
+nation\), yours will be a different three-letter code.
 
 There is a list of station codes **[on this page](http://www.datasink.com/cgi-bin/stationCodes.cgi)**.
 
@@ -72,12 +70,12 @@ and there it is, Glasgow, "KGGW":
 
 ![Station Code Search](http://fyngyrz.com/images/kggw.png)  
 
-I remove the `k`, and construct `xxx` + `MTR` + `ggw` = `xxxMTRggw`
-\(Notice the use of lower case instead of upper case, following the example
-the NWS provides for doing this.\) It looks like this  on my system:
+Remove the first letter, and use the remaining three.
+The code is not case-sensitive.
+The default looks like this:
 
 ```python
-stationid = "xxxMTRggw"
+stationid = "ggw"
 ```
 
 That's the process, but again, this may only work in the "western region."
